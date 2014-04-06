@@ -10,7 +10,7 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.test.context.transaction.TransactionConfiguration;
 
 import com.scc.app.dao.usuario.UsuarioDAO;
-import com.scc.app.model.Usuario;
+import com.scc.app.model.usuario.Usuario;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(locations = { "classpath:/coreContext.xml" })

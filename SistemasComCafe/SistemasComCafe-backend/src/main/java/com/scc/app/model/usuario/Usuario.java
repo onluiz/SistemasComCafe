@@ -1,4 +1,4 @@
-package com.scc.app.model;
+package com.scc.app.model.usuario;
 
 import java.io.Serializable;
 

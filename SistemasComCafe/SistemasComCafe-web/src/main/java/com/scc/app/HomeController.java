@@ -13,7 +13,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.scc.app.dao.usuario.UsuarioDAO;
-import com.scc.app.model.Usuario;
 
 
 @Controller
@@ -32,12 +31,6 @@ private static final Logger logger = LoggerFactory.getLogger(HomeController.clas
 
 	@RequestMapping(value = "/", method = RequestMethod.GET)
 	public String home(Locale locale, Model model) {
-		Usuario usuario = new Usuario();
-		usuario.setUsername("luiz2");
-		usuario.setPassword("apenas um teste");
-		usuario.setAtivo(false);
-		usuarioDAO.persist(usuario);
-		
 		logger.info("Welcome home! The client locale is {}.", locale);
 		
 		Date date = new Date();

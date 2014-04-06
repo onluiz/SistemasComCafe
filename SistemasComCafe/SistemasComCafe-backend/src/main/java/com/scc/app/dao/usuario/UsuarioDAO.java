@@ -1,6 +1,6 @@
 package com.scc.app.dao.usuario;
 
-import com.scc.app.model.Usuario;;
+import com.scc.app.model.usuario.Usuario;
 
 public interface UsuarioDAO {
 
