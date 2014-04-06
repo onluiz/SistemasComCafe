@@ -10,6 +10,17 @@
   <properties>
   	<sistemascomcafe.version>1.0.0</sistemascomcafe.version>
   	<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  	
+  	<!-- Dependency Version -->
+  	<jpa-api.version>2.0-cr-1</jpa-api.version>
+	<hibernate-entitymanager.version>3.6.7.Final</hibernate-entitymanager.version>
+	<aspectj.version>1.6.10</aspectj.version>
+	<spring.version>3.2.1.RELEASE</spring.version>
+	<slf4j.version>1.5.11</slf4j.version>
+	<junit.version>4.8.2</junit.version>
+	
+	
+	
   </properties>
 
   <modules>

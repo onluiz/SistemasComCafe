@@ -10,7 +10,7 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.test.context.transaction.TransactionConfiguration;
 
 import com.scc.app.dao.usuario.UsuarioDAO;
-import com.scc.app.model.Usuairo;
+import com.scc.app.model.Usuario;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(locations = { "classpath:/coreContext.xml" })
@@ -26,7 +26,7 @@ public class UsuarioTest {
 	@Test
 	@Ignore
 	public void persist() {
-		Usuairo usuario = new Usuairo();
+		Usuario usuario = new Usuario();
 		usuario.setUsername("luiz");
 		usuario.setPassword(passwordEncryptor.encryptPassword("12345"));
 		usuario.setAtivo(true);
