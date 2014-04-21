@@ -1,0 +1,32 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:security="http://www.springframework.org/schema/security"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+	http://www.springframework.org/schema/security
+	http://www.springframework.org/schema/security/spring-security-3.0.xsd">
+	
+	 <!-- SECURITY CONFIGURATIONS -->
+    <security:global-method-security pre-post-annotations="enabled" jsr250-annotations="enabled" />
+ 
+	<security:http auto-config="true" use-expressions="true">
+		<security:intercept-url pattern="/reset-password.html" access="permitAll" />
+		<security:intercept-url pattern="/integration/**" access="permitAll" />
+		<security:intercept-url pattern="//integration-sender/**" access="permitAll" />
+		<security:intercept-url pattern="/assets/**" access="permitAll" />
+		<security:intercept-url pattern="/login*" access="permitAll" />
+		<security:intercept-url pattern="/googleCallback*" access="permitAll" />
+		<security:intercept-url pattern="/**" access="isAuthenticated()" />
+		<security:form-login login-page="/login" authentication-failure-handler-ref="authenticationFailureHandler"/>
+	</security:http>
+		
+	<bean id="authenticationFailureHandler" class="com.scc.app.infrastructure.spring.AuthenticationFailureHandler" />
+	
+	<!-- SECURITY RELATED SERVICES -->
+    <bean id="authenticationProvider" class="com.scc.app.infrastructure.spring.AuthenticationProvider" />
+    <security:authentication-manager alias="authenticationManager">
+        <security:authentication-provider ref="authenticationProvider" />
+    </security:authentication-manager>
+ 
+</beans>
