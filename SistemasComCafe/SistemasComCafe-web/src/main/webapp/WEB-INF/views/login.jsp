@@ -8,6 +8,9 @@
 	<meta charset="utf-8" />
 	<meta name="description" content="User login page" />
 	<title>Acesso ao sistema - ${NOME_EMPRESA}</title>
+	
+	<link href="<c:url value='/assets/css/bootstrap.min.css' />" rel="stylesheet" />
+	
 </head>
 <body>
 
