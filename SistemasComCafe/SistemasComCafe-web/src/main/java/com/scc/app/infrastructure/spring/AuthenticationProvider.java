@@ -1,33 +1,13 @@
 package com.scc.app.infrastructure.spring;
 
-import java.util.HashSet;
-import java.util.Set;
-
 import org.springframework.security.authentication.AuthenticationServiceException;
-import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.AuthenticationException;
 
 public class AuthenticationProvider implements org.springframework.security.authentication.AuthenticationProvider {
-
+	
 	public Authentication authenticate(Authentication authentication) throws AuthenticationException {
-		System.out.println("authenticate");
-		String login = extractLogin(authentication);
-		String plainPassword = extractPassword(authentication);
-		
-		System.out.println(login);
-		System.out.println(plainPassword);
-		
-		Set<String> hashPermissoes = new HashSet<String>();
-		
-		
-		
-		UsernamePasswordAuthenticationToken usernamePasswordAuthenticationToken = new UsernamePasswordAuthenticationToken(null, null);
-		
-		
-		
-		
-		return usernamePasswordAuthenticationToken;
+		return null;
 	}
 	
 	private String extractLogin(final Authentication authentication) {
